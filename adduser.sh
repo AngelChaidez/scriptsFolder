@@ -1,7 +1,13 @@
-#!/bin/bash
-echo "Please list all users to add:"
-read noUsers
+#!/usr/bin/sudo bash
+# Lets read in the names of all users to be added
+# to our linux file system
 
+echo "Please list all users to add:"
+# Read in all users 
+read noUsers
+# I will use a for loop to enter all users
+# adding a temp password of the username
+# with @123 added as their initial password
 	for i in $noUsers 
 	do 
 		
@@ -11,6 +17,5 @@ read noUsers
 		useradd -m $i -p $password
 
 	done
-
 
 
